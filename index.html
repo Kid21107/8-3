@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Women's Day 8/3</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="petals-container" id="petals"></div>
+
+<span class="scene-title">Ngày Phụ Nữ Việt Nam 8/3</span>
+
+<!-- INTRO SCREEN -->
+<div class="intro-screen" id="introScreen">
+  <div class="intro-text-wrapper">
+    <span class="intro-line" id="introLine"></span>
+  </div>
+</div>
+
+<div class="valentine-scene" id="envelopeScene">
+  <div class="v-letter" aria-hidden="false">
+    <div class="v-valentines" id="valentines">
+      <div class="v-envelope" aria-hidden="true"></div>
+      <div class="v-front" aria-hidden="true"></div>
+
+      <!-- Card: nội dung thư ẩn khi di chuột vào hiện ra -->
+      <div class="v-card" id="openCard" role="button" tabindex="0" aria-label="Mở thư">
+        <div class="v-card-text">Ngày<br>Phụ nữ<br>VN!</div>
+      </div>
+
+      <div class="v-hearts" aria-hidden="true">
+        <div class="v-one"></div>
+        <div class="v-two"></div>
+        <div class="v-three"></div>
+        <div class="v-four"></div>
+        <div class="v-five"></div>
+      </div>
+    </div>
+    <div class="v-shadow" aria-hidden="true"></div>
+  </div>
+</div>
+
+
+<div class="letter-overlay" id="letterOverlay" aria-hidden="true">
+  <div class="letter-container" role="dialog" aria-modal="true" aria-label="Lá thư">
+    <div class="letter">
+      <div class="letter-date" id="letterDate" contenteditable="true" spellcheck="false">8 tháng 3</div>
+
+      <div class="letter-content">
+        <div class="letter-photo">
+          <!-- // Đặt ảnh kỷ niệm ở đây, có thể chỉnh sửa src trong HTML hoặc qua script.js -->
+          <img src="image/anhr.jpg" alt="Ảnh kỷ niệm" id="letterImg" />
+        </div>
+
+        <div class="letter-text-side">
+          <div class="letter-greeting" id="letterGreeting"></div>
+          <div class="letter-body" id="letterBody"></div>
+          <div class="letter-signature" id="letterSig"></div>
+        </div>
+      </div>
+
+      <img
+        class="gift-sticker gift-sticker-left"
+        id="giftSticker"
+        alt="Quà"
+        src="image/mewmew.gif"
+        decoding="async"
+      />
+      <button class="gift-btn" id="giftBtn" type="button" disabled aria-label="Mở quà">Quà bất ngờ</button>
+    </div>
+  </div>
+</div>
+
+<!-- VIDEO SCREEN -->
+<div class="video-screen" id="videoScreen" aria-hidden="true">
+  <button class="video-exit" id="videoExitBtn" type="button" aria-label="Thoát video">X</button>
+  <video class="gift-video" id="giftVideo" controls preload="auto">
+    <!-- sửa src trong HTML hoặc qua script.js nếu muốn dùng video khác, để trống sẽ dùng src mặc định (v2.mp4) -->
+    <source src="vi.mp4" type="video/mp4">
+  </video>
+</div>
+
+<div class="hearts-burst" id="heartsBurst"></div>
+
+<!-- file nhạc sửa ở đây -->
+<audio id="bgMusic" loop autoplay playsinline preload="auto">
+  <source src="nhaccc.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
